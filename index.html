@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap5 Validated Form</title>
+    <!-- Bootstrap5 CSS Linking Starts Here -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Bootstrap5 JS Linking Starts Here -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="container" style="margin-top: 60px;">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="" class="form-label">Email:</label>
+                <input type="email" class="form-control" placeholder="Enter Your Mail" required>
+                <div class="valid-feedback">
+                    <p>Thanks For Reaching Out</p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                 <label for="" class="form-label">Password:</label>
+                 <input type="password" class="form-control" placeholder="Enter Your Mail">
+            </div>
+            <div class="col-md-12">
+                 <label for="" class="form-label">Address1:</label>
+                 <input type="text" class="form-control" placeholder="57/A Jafrabad">
+            </div>
+
+            <div class="col-md-12">
+                 <label for="" class="form-label">Address2:</label>
+                 <input type="text" class="form-control" placeholder="Enter Your Address">
+            </div>
+            <div class="col-md-6">
+                <label for="" class="form-label">City:</label>
+                <input type="text" class="form-control" placeholder="Enter Your City">
+            </div>
+
+            <div class="col-md-4">
+                <label for="">State</label>
+                <select class="form-select">
+                    <option selected>Dhaka</option>
+                    <option selected>Rajshahi</option>
+                    <option selected>Chattogram</option>
+                </select>
+            </div>
+
+            <div class="col-md-2">
+                <label for="" class="form-label">Zip</label>
+                <input type="text" class="form-control" placeholder="Enter Your Zip Code">
+            </div>
+
+            <div class="col-md-12 mt-4">
+                <input type="checkbox" class="form-check-input" id="chk">
+                <label for="chk" class="form-check-label">Go to The Checkbox</label>
+            </div>
+
+            <div class="col-md-12 mt-3">
+                <button class="btn btn-primary">Submit</button>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="container" style="margin-top: 60px;">
+        <form class="row needs-validation" novalidate>
+            <div class="col-md-6">
+                <label for="" class="form-label">Email:</label>
+                <input type="email" class="form-control" placeholder="Enter Your Mail" required>
+                <div class="valid-feedback">
+                    <p>Your Mail Is Valid</p>
+                </div>
+                <div class="invalid-feedback">
+                    <p>Sorry Your Mail Is Unverified</p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                 <label for="" class="form-label">Password:</label>
+                 <input type="password" class="form-control" placeholder="Enter Your Mail" required>
+                 <div class="valid-feedback">
+                    <p>Your Password is good</p>
+                 </div>
+                 <div class="invalid-feedback">
+                    <p>Sorry Your Password Is unvalid</p>
+                 </div>
+            </div>
+            <div class="col-md-12 mt-2 ">
+                 <label for="" class="form-label">Address1:</label>
+                 <input type="text" class="form-control" placeholder="57/A Jafrabad" required>
+                 <div class="valid-feedback">
+                    <p>Your Address Is Valid</p>
+                 </div>
+                 <div class="invalid-feedback">
+                    <p>Sorry Your Address Unvalid</p>
+                 </div>
+            </div>
+
+            <div class="col-md-12 mt-2">
+                 <label for="" class="form-label">Address2:</label>
+                 <input type="text" class="form-control" placeholder="Enter Your Address">
+            </div>
+            <div class="col-md-6">
+                <label for="" class="form-label">City:</label>
+                <input type="text" class="form-control" placeholder="Enter Your City">
+            </div>
+
+            <div class="col-md-4">
+                <label for="">State</label>
+                <select class="form-select">
+                    <option selected>Dhaka</option>
+                    <option selected>Rajshahi</option>
+                    <option selected>Chattogram</option>
+                </select>
+            </div>
+
+            <div class="col-md-2">
+                <label for="" class="form-label">Zip</label>
+                <input type="text" class="form-control" placeholder="Enter Your Zip Code">
+            </div>
+
+            <div class="col-md-12 mt-4">
+                <input type="checkbox" class="form-check-input" id="chk" required>
+                <div class="valid-feedback">
+                    <p>Select</p>
+                </div>
+                <div class="invalid-feedback">
+                    <p>You Must Agree Before Submitting</p>
+                </div>
+                <label for="chk" class="form-check-label">Go to The Checkbox</label>
+            </div>
+
+            <div class="col-md-12 mt-3">
+                <button class="btn btn-primary">Submit</button>
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+        
+    </script>
+    
+</body>
+</html>
